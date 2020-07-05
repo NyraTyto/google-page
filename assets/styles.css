@@ -2,22 +2,28 @@
   margin: 0;
 }
 
+html,
 body {
-  margin: 12px 26px;
+  height: 100%;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Header */
 
+header {
+  height: 100px;
+}
+
 nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  padding: 12px 26px;
 }
 
 nav a {
   margin-right: 18px;
-
   font-size: 13px;
   text-decoration: none;
   color: #333;
@@ -32,16 +38,13 @@ nav a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2px;
-
   margin-right: 16px;
-
   cursor: pointer;
 }
 
 .icon-parts {
   width: 4px;
   height: 4px;
-
   background-color: #666;
 }
 
@@ -51,11 +54,49 @@ nav a:hover {
 
 nav img {
   width: 32px;
-
   padding: 1px;
-
   border: 2px solid #4285F4;
   border-radius: 50%;
-
   cursor: pointer;
+}
+
+/* Main */
+
+main {
+  min-height: 100%;
+  position: relative;
+}
+
+/* Footer */
+
+footer {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 26px;
+  border: 1px solid #ddd;
+  background-color: #eee;
+}
+
+.content a,
+.content p {
+  margin-right: 24px;
+
+  font-size: 14px;
+  text-decoration: none;
+  color: #555;
+}
+
+.content a:last-child {
+  margin-right: 0;
+}
+
+.content a:hover {
+  text-decoration: underline;
 }
